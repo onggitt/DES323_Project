@@ -1,3 +1,50 @@
-<div class="footer bg-primary text-center p-1 m-1">
-    <h1 class="text-white">DES323 Week10 Tutorials</h1>
-</div>
+{% load static %}
+<footer class="container-fluid" style="background-color: #F59661;">
+  <div class="row">
+    <div class="col-md-5 col-sm-12 ml-md-5 order-2 order-md-1">
+      <h2 class="text-black" style="font-weight: bold;">YTInsight</h2>
+      <div class="row">
+        <div class="col">
+          <a href="#" style="text-decoration: none; color: black;">
+            <h4 class="text-black" style="text-decoration: none; color: black;">About Us</h4>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#" style="text-decoration: none; color: black;">
+            <h4 class="text-black" style="color: black;">FAQs</h4>
+          </a>
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+          <a href="#" style="text-decoration: none; color: black;">
+            <h4 class="text-black" style="color: black;">Contact Us</h4>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#" style="text-decoration: none; color: black;">
+            <h4 class="text-black" style="color: black;">Privacy Policy</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2 col-sm-12 order-1 order-md-2"></div>
+    <div class="col-md-4 col-sm-12 order-3 order-md-3">
+      <h2 class="text-black" style="font-weight: bold;">Follow Us</h2>
+      <div class="row">
+        <!-- Add your icons here -->
+        <div class="col-3">
+          <img src="{% static 'fa-icon1.png' %}" height="60" alt="Icon 1">
+        </div>
+        <div class="col-3">
+          <img src="{% static 'fa-icon2.png' %}" height="60" alt="Icon 2">
+        </div>
+        <div class="col-3">
+          <img src="{% static 'fa-icon3.png' %}" height="60" alt="Icon 3">
+        </div>
+        <div class="col-3">
+          <img src="{% static 'fa-icon4.png' %}" height="60" alt="Icon 4">
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

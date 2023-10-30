@@ -1,13 +1,108 @@
 {% extends 'components/layout.html' %}
 
 {% block title %}
-Test Override
+YTInsight
 {% endblock %}
 
 {% block content %}
-<div style="min-height: 80vh;" id="content">
-
-
+<div style="min-height: 87vh; background-color: #CB5F5F;" id="content">
+    <h1 class="pt-5" style="text-align: center;">Youtube Comment Analysis</h1>
+    <h1 class="pt-5">Analysis History</h1>
+    <table class="table table-hover" style="background-color: #E7D6AA;">
+        <thead>
+            <tr>
+                <th scope="col">Thumbnail</th>
+                <th scope="col">Video Title</th>
+                <th scope="col">Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>keshi-B.Y.S</td>
+                <td><div id="chartContainer1" style="width: 100px; height: 100px;"></div></td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>mobile suit</td>
+                <td><div id="chartContainer2" style="width: 100px; height: 100px;"></div></td>
+            </tr>
+        </tbody>
+    </table>
+        <div class="input-group">
+            <div class="col-6">
+                <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-outline-primary" style="background-color: white; color: black; border-radius: 10px; font-weight: 600;">Analyze</button>
+            </div>
+        </div>
+    
 </div>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+    // Data for the pie chart
+    const data = [
+        { label: 'Red', value: 40 },
+        { label: 'Green', value: 30 },
+        { label: 'Grey', value: 20 }
+    ];
+
+    // Set dimensions and radius for the pie chart
+    const width = 100;
+    const height = 100;
+    const radius = Math.min(width, height) / 2;
+
+    // Define color scale
+    const color = d3.scaleOrdinal()
+        .domain(data.map(d => d.label))
+        .range(['red', 'green', 'grey']);
+
+    // Create SVG element
+    const svg1 = d3.select('#chartContainer1')
+        .append('svg')
+        .attr('width', width)
+        .attr('height', height)
+        .append('g')
+        .attr('transform', `translate(${width / 2},${height / 2})`);
+
+    const svg2 = d3.select('#chartContainer2')
+        .append('svg')
+        .attr('width', width)
+        .attr('height', height)
+        .append('g')
+        .attr('transform', `translate(${width / 2},${height / 2})`);
+
+    // Define the pie
+    const pie = d3.pie()
+        .value(d => d.value);
+
+    // Define the arc
+    const arc = d3.arc()
+        .innerRadius(0)
+        .outerRadius(radius);
+
+    // Draw the pie chart for the first table
+    const g1 = svg1.selectAll('.arc')
+        .data(pie(data))
+        .enter()
+        .append('g')
+        .attr('class', 'arc');
+
+    g1.append('path')
+        .attr('d', arc)
+        .style('fill', d => color(d.data.label));
+
+    // Draw the pie chart for the second table
+    const g2 = svg2.selectAll('.arc')
+        .data(pie(data))
+        .enter()
+        .append('g')
+        .attr('class', 'arc');
+
+    g2.append('path')
+        .attr('d', arc)
+        .style('fill', d => color(d.data.label));
+</script>
 
 {% endblock %}
