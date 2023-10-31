@@ -15,22 +15,22 @@ YTInsight
             <table class="table table-hover table-bordered" style="background-color: #E7D6AA;">
                 <thead>
                     <tr>
-                        <th scope="col">Thumbnail</th>
-                        <th scope="col">Video Title</th>
-                        <th scope="col">Result</th>
+                        <th scope="col" class="col-4" style="text-align: center;">Thumbnail</th>
+                        <th scope="col" style="text-align: center;">Video Title</th>
+                        <th scope="col" class="col-2" style="text-align: center;">Result</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row">1</th>
-                        <td>keshi-B.Y.S</td>
+                        <td style="text-align: center;">keshi-B.Y.S</td>
                         <td>
                             <div id="chartContainer1"></div>
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">2</th>
-                        <td>mobile suit</td>
+                        <td style="text-align: center;">mobile suit</td>
                         <td>
                             <div id="chartContainer2"></div>
                         </td>
@@ -41,7 +41,7 @@ YTInsight
         <div class="row">
             <div class="input-group">
                 <div class="col-8 pl-3">
-                    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+                    <input type="search" class="form-control rounded" placeholder="Paste your URL" aria-label="Paste your URL"
                         aria-describedby="search-addon" />
                 </div>
                 <div class="col-4">
@@ -57,6 +57,7 @@ YTInsight
 </div>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script>
+    
     // Data for the pie chart
     const data = [
         { label: 'Red', value: 40 },

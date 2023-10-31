@@ -1,0 +1,196 @@
+{% extends 'components/layout.html' %}
+
+{% block title %}
+YTInsight
+{% endblock %}
+
+{% block content %}
+<script>
+    function Insert() {
+        console.log("Insert")
+    }
+    function Refresh() {
+        console.log("Refresh")
+    }
+    function Update() {
+        console.log("Update")
+    }
+    function Delete() {
+        console.log("Delete")
+    }
+</script>
+<div style="min-height: 95vh; background-color: #CB5F5F;" id="content">
+    <h1 class="pt-5" style="text-align: center;">Comments of "keshi-B.Y.S"</h1>
+    <div class="col-md-8 mx-auto">
+        <table class="table table-hover table-bordered" style="background-color: #E7D6AA;">
+            <thead>
+                <tr>
+                    <th class="col-1" scope="col" style="text-align: center;">
+                        <span class="custom-checkbox">
+                            <input type="checkbox" id="selectAll">
+                            <label for="selectAll"></label>
+                        </span>
+                    </th>
+                    <th scope="col" class="col-7" style="text-align: center;">Comment</th>
+                    <div class="text-right mb-2">
+                        <button onclick="Insert()" type="button" class="btn btn-primary ml-2" >Insert</button>
+                        <button onclick="Refresh()" type="button" class="btn btn-primary mr-5">Refresh</button>
+                    </div>
+                    <th scope="col" class="col-2" style="text-align: center;">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="col" style="text-align: center;">
+                        <span class="custom-checkbox">
+                            <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                            <label for="checkbox1"></label>
+                        </span>
+                    </th>
+                    <td style="text-align: center;">keshi-B.Y.S</td>
+                    <td>
+                        <div style="text-align: center;">
+                        <button onclick="Update()">Update</button>
+                        <button onclick="Delete()">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="col" style="text-align: center;">
+                        <span class="custom-checkbox">
+                            <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                            <label for="checkbox2"></label>
+                        </span>
+                    </th>
+                    <td style="text-align: center;">mobile suit</td>
+                    <td>
+                        <div style="text-align: center;">
+                            <button onclick="Update()">Update</button>
+                            <button onclick="Delete()">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="col" style="text-align: center;">
+                        <span class="custom-checkbox">
+                            <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                            <label for="checkbox2"></label>
+                        </span>
+                    </th>
+                    <td style="text-align: center;">This song is good</td>
+                    <td>
+                        <div style="text-align: center;">
+                            <button onclick="Update()">Update</button>
+                            <button onclick="Delete()">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="col" style="text-align: center;">
+                        <span class="custom-checkbox">
+                            <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                            <label for="checkbox2"></label>
+                        </span>
+                    </th>
+                    <td style="text-align: center;">this song suck</td>
+                    <td>
+                        <div style="text-align: center;">
+                            <button onclick="Update()">Update</button>
+                            <button onclick="Delete()">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="col" style="text-align: center;">
+                        <span class="custom-checkbox">
+                            <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                            <label for="checkbox2"></label>
+                        </span>
+                    </th>
+                    <td style="text-align: center;">Fabulous</td>
+                    <td>
+                        <div style="text-align: center;">
+                            <button onclick="Update()">Update</button>
+                            <button onclick="Delete()">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="col" style="text-align: center;">
+                        <span class="custom-checkbox">
+                            <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                            <label for="checkbox2"></label>
+                        </span>
+                    </th>
+                    <td style="text-align: center;">Good</td>
+                    <td>
+                        <div style="text-align: center;">
+                            <button onclick="Update()">Update</button>
+                            <button onclick="Delete()">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="col" style="text-align: center;">
+                        <span class="custom-checkbox">
+                            <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                            <label for="checkbox2"></label>
+                        </span>
+                    </th>
+                    <td style="text-align: center;">One of a kind</td>
+                    <td>
+                        <div style="text-align: center;">
+                            <button onclick="Update()">Update</button>
+                            <button onclick="Delete()">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="col" style="text-align: center;">
+                        <span class="custom-checkbox">
+                            <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                            <label for="checkbox2"></label>
+                        </span>
+                    </th>
+                    <td style="text-align: center;">Stay</td>
+                    <td>
+                        <div style="text-align: center;">
+                            <button onclick="Update()">Update</button>
+                            <button onclick="Delete()">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="col" style="text-align: center;">
+                        <span class="custom-checkbox">
+                            <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                            <label for="checkbox2"></label>
+                        </span>
+                    </th>
+                    <td style="text-align: center;">Pokemon in real life</td>
+                    <td>
+                        <div style="text-align: center;">
+                            <button onclick="Update()">Update</button>
+                            <button onclick="Delete()">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="col" style="text-align: center;">
+                        <span class="custom-checkbox">
+                            <input type="checkbox" id="checkbox1" name="options[]" value="1">
+                            <label for="checkbox2"></label>
+                        </span>
+                    </th>
+                    <td style="text-align: center;">I had this song on repeat</td>
+                    <td>
+                        <div style="text-align: center;">
+                            <button onclick="Update()">Update</button>
+                            <button onclick="Delete()">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    {% endblock %}
